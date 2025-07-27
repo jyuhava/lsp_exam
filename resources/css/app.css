@@ -1,0 +1,578 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CKEditor 5 Basic Styles */
+.ckeditor-wrapper .ck-editor {
+    border: none !important;
+}
+
+.ckeditor-wrapper .ck-editor__editable {
+    min-height: 300px !important;
+    padding: 1rem !important;
+}
+
+.ckeditor-wrapper .ck-toolbar {
+    border-bottom: 1px solid #d1d5db !important;
+    background: #f9fafb !important;
+}
+
+/* Table styles in CKEditor */
+.ckeditor-wrapper .ck-content table {
+    border-collapse: collapse;
+    border: 1px solid #d1d5db;
+    margin: 1em 0;
+    width: 100%;
+}
+
+.ckeditor-wrapper .ck-content table td,
+.ckeditor-wrapper .ck-content table th {
+    border: 1px solid #d1d5db;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.ckeditor-wrapper .ck-content table th {
+    background-color: #f3f4f6;
+    font-weight: bold;
+}
+
+/* Custom styles for rich text content */
+.rich-text-content {
+    @apply max-w-none text-sm leading-relaxed;
+}
+
+.rich-text-content h1,
+.rich-text-content h2,
+.rich-text-content h3,
+.rich-text-content h4,
+.rich-text-content h5,
+.rich-text-content h6 {
+    @apply font-semibold text-gray-900 mb-2 mt-4;
+}
+
+.rich-text-content h1 { @apply text-2xl; }
+.rich-text-content h2 { @apply text-xl; }
+.rich-text-content h3 { @apply text-lg; }
+.rich-text-content h4 { @apply text-base; }
+.rich-text-content h5 { @apply text-sm; }
+.rich-text-content h6 { @apply text-xs; }
+
+.rich-text-content p {
+    @apply mb-3 text-gray-700 leading-relaxed;
+}
+
+.rich-text-content ul,
+.rich-text-content ol {
+    @apply mb-3 pl-6;
+}
+
+.rich-text-content ul {
+    @apply list-disc;
+}
+
+.rich-text-content ol {
+    @apply list-decimal;
+}
+
+.rich-text-content li {
+    @apply mb-1 text-gray-700;
+}
+
+.rich-text-content img {
+    @apply max-w-full h-auto rounded-lg shadow-sm my-4;
+}
+
+.rich-text-content a {
+    @apply text-blue-600 hover:text-blue-800 underline;
+}
+
+.rich-text-content blockquote {
+    @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4 bg-gray-50 py-2;
+}
+
+.rich-text-content code {
+    @apply bg-gray-100 px-2 py-1 rounded text-sm font-mono text-gray-800;
+}
+
+.rich-text-content pre {
+    @apply bg-gray-100 p-4 rounded-lg overflow-x-auto my-4;
+}
+
+.rich-text-content pre code {
+    @apply bg-transparent p-0;
+}
+
+.rich-text-content strong,
+.rich-text-content b {
+    @apply font-semibold text-gray-900;
+}
+
+.rich-text-content em,
+.rich-text-content i {
+    @apply italic;
+}
+
+.rich-text-content u {
+    @apply underline;
+}
+
+/* Quill editor wrapper styles */
+.quill-wrapper .ql-editor {
+    min-height: 150px;
+}
+
+.quill-wrapper .ql-toolbar {
+    border-top: 1px solid #d1d5db;
+    border-left: 1px solid #d1d5db;
+    border-right: 1px solid #d1d5db;
+    border-bottom: none;
+    border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.quill-wrapper .ql-container {
+    border-bottom: 1px solid #d1d5db;
+    border-left: 1px solid #d1d5db;
+    border-right: 1px solid #d1d5db;
+    border-top: none;
+    border-radius: 0 0 0.375rem 0.375rem;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+    backdrop-filter: blur(4px);
+}
+
+/* Smooth transitions */
+.transition-all-300 {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Custom button hover effects */
+.btn-hover-scale:hover {
+    transform: scale(1.02);
+}
+
+/* Accordion animation */
+.accordion-content {
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Loading spinner */
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Focus ring improvements */
+.focus-ring:focus {
+    @apply outline-none ring-2 ring-indigo-500 ring-offset-2;
+}
+
+/* Card hover effects */
+.card-hover:hover {
+    @apply shadow-lg transform -translate-y-1;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Badge styles */
+.badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.badge-primary {
+    @apply bg-indigo-100 text-indigo-800;
+}
+
+.badge-success {
+    @apply bg-green-100 text-green-800;
+}
+
+.badge-warning {
+    @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-danger {
+    @apply bg-red-100 text-red-800;
+}
+
+.badge-secondary {
+    @apply bg-gray-100 text-gray-800;
+}
+
+/* Responsive text sizes */
+@media (max-width: 640px) {
+    .responsive-text-lg {
+        @apply text-base;
+    }
+    
+    .responsive-text-xl {
+        @apply text-lg;
+    }
+    
+    .responsive-text-2xl {
+        @apply text-xl;
+    }
+}
+
+/* React Quill Custom Styles */
+.ql-editor {
+    min-height: 300px !important;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.ql-container {
+    font-size: 14px;
+}
+
+.ql-toolbar {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: none;
+}
+
+.ql-container {
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: none;
+}
+
+/* Fix for React Quill height issues */
+.quill-wrapper {
+    min-height: 350px;
+}
+
+.quill-wrapper .ql-container {
+    min-height: 300px;
+}
+
+.quill-wrapper .ql-editor {
+    min-height: 300px;
+    max-height: none;
+    overflow-y: auto;
+}
+
+/* Ensure proper spacing */
+.ql-editor p {
+    margin-bottom: 1em;
+}
+
+.ql-editor h1, .ql-editor h2, .ql-editor h3, .ql-editor h4, .ql-editor h5, .ql-editor h6 {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+/* Rich text content display styles */
+.rich-text-content {
+    line-height: 1.6;
+}
+
+.rich-text-content p {
+    margin-bottom: 1em;
+}
+
+.rich-text-content h1, .rich-text-content h2, .rich-text-content h3, 
+.rich-text-content h4, .rich-text-content h5, .rich-text-content h6 {
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.rich-text-content h1 { font-size: 2em; }
+.rich-text-content h2 { font-size: 1.5em; }
+.rich-text-content h3 { font-size: 1.25em; }
+.rich-text-content h4 { font-size: 1.125em; }
+.rich-text-content h5 { font-size: 1em; }
+.rich-text-content h6 { font-size: 0.875em; }
+
+.rich-text-content strong {
+    font-weight: bold;
+}
+
+.rich-text-content em {
+    font-style: italic;
+}
+
+.rich-text-content u {
+    text-decoration: underline;
+}
+
+.rich-text-content s {
+    text-decoration: line-through;
+}
+
+.rich-text-content ol {
+    list-style-type: decimal;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+.rich-text-content ul {
+    list-style-type: disc;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+}
+
+.rich-text-content li {
+    margin-bottom: 0.5em;
+}
+
+.rich-text-content blockquote {
+    border-left: 4px solid #e5e7eb;
+    padding-left: 1em;
+    margin: 1em 0;
+    font-style: italic;
+    color: #6b7280;
+}
+
+.rich-text-content pre {
+    background-color: #f3f4f6;
+    padding: 1em;
+    border-radius: 0.375rem;
+    overflow-x: auto;
+    margin: 1em 0;
+}
+
+.rich-text-content code {
+    background-color: #f3f4f6;
+    padding: 0.125em 0.25em;
+    border-radius: 0.25rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.875em;
+}
+
+.rich-text-content a {
+    color: #3b82f6;
+    text-decoration: underline;
+}
+
+.rich-text-content a:hover {
+    color: #1d4ed8;
+}
+
+.rich-text-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1em 0;
+}
+
+/* Custom Sidebar Styles */
+@layer components {
+    /* Sidebar transition animations */
+    .sidebar-transition {
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    /* Custom scrollbar for sidebar */
+    .sidebar-scroll::-webkit-scrollbar {
+        width: 4px;
+    }
+    
+    .sidebar-scroll::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    .sidebar-scroll::-webkit-scrollbar-thumb {
+        background: #e5e7eb;
+        border-radius: 2px;
+    }
+    
+    .sidebar-scroll::-webkit-scrollbar-thumb:hover {
+        background: #d1d5db;
+    }
+    
+    /* Sidebar item hover effects */
+    .sidebar-item {
+        position: relative;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .sidebar-item:hover {
+        transform: translateX(2px);
+    }
+    
+    .sidebar-item.active::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(to bottom, #6366f1, #8b5cf6);
+        border-radius: 0 2px 2px 0;
+    }
+    
+    /* Top navbar shadow */
+    .navbar-shadow {
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    }
+    
+    /* Card hover effects */
+    .card-hover {
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    /* Gradient backgrounds */
+    .gradient-primary {
+        background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    }
+    
+    .gradient-secondary {
+        background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+    }
+    
+    /* Icon animations */
+    .icon-bounce {
+        animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+        0%, 20%, 53%, 80%, 100% {
+            transform: translate3d(0,0,0);
+        }
+        40%, 43% {
+            transform: translate3d(0, -8px, 0);
+        }
+        70% {
+            transform: translate3d(0, -4px, 0);
+        }
+        90% {
+            transform: translate3d(0, -2px, 0);
+        }
+    }
+    
+    /* Loading spinner */
+    .spinner {
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    
+    /* Custom focus styles */
+    .focus-ring {
+        @apply focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+    }
+    
+    /* Responsive text */
+    .text-responsive {
+        @apply text-sm sm:text-base;
+    }
+    
+    /* Custom button styles */
+    .btn-primary {
+        @apply bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus-ring;
+    }
+    
+    .btn-secondary {
+        @apply bg-gray-100 hover:bg-gray-200 text-gray-900 font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus-ring;
+    }
+    
+    /* Stats card animations */
+    .stats-card {
+        @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6 transition-all duration-200;
+    }
+    
+    .stats-card:hover {
+        @apply shadow-md border-gray-300;
+    }
+    
+    /* Mobile responsive adjustments */
+    @media (max-width: 768px) {
+        .sidebar-mobile {
+            width: 280px;
+        }
+    }
+}
+
+/* Ion-icon custom styles */
+ion-icon {
+    pointer-events: none;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Force ion-icon to always be visible */
+.sidebar-item ion-icon {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Ensure icons don't disappear during transitions */
+.sidebar-transition ion-icon {
+    display: block !important;
+    visibility: visible !important;
+}
+
+/* Ensure proper spacing for mobile */
+@media (max-width: 1024px) {
+    .main-content-mobile {
+        margin-left: 0 !important;
+    }
+}
